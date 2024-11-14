@@ -7,6 +7,14 @@
     background-position: center;
 }
 
+.container__botao:checked ~ .container__rotulo > .cabeçalho__menu-hamburguer {
+    background-image: url("../img/Menu\ Aberto.svg");
+}
+
+.container__botao:checked ~ .container__rotulo {
+    background-color: aqua;
+}
+
 .cabeçalho {
     background-color: var(#169b5d);
     display: flex;
@@ -66,6 +74,10 @@
     display: none;
 }
 
+.container__texto {
+    display: none;
+}
+
 @media screen and (min-width: 1024px) {
     .container__titulo, .container__titulo--negrito {
         font-family: var(fonte-secundario);
@@ -112,5 +124,43 @@
     .opções__botão {
         display: none;
     }
+
+    .opções__botão:checked ~ .opções__rotulo > .opções__item {
+        background-color: blue;
+    }
+
+    .opções__item {
+        padding: 2em 1em;
+    }
+
+    .lista-menu__item:hover {
+        background-color: blue;
+    }
+
+    .lista-menu__item:hover > .lista-menu__link {
+        -webkit-text-fill-color: azure;
+        text-decoration: none;
+    }
     
+}
+
+@media screen and (min-width: 1728px) {
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+       color: black;
+    }
+}
+
+.cabecalho {
+    padding: 0 2em;
+}
+
+.opcoes {
+    margin-right: auto;
+}
+
+.container__texto {
+    display: block;
 }
